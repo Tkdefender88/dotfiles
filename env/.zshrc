@@ -19,7 +19,7 @@ alias dc="docker compose"
 alias dcu="docker compose up"
 alias dcr="docker compose run --rm"
 
-alias reload="source ~/.config/zsh/.zshrc"
+alias reload="source ~/.zshrc"
 alias config="cd ~/.config"
 alias edbash="nvim ~/.zshrc && reload"
 
@@ -37,6 +37,7 @@ export GOPROXY=direct
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOBIN
 export PATH=$PATH:/snap/bin
+export PATH=$PATH:$HOME/.cargo/bin
 export PATH="$PATH":"$HOME/bin"
 
 export VISUAL=nvim;

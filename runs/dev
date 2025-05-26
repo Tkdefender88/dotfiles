@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+yay -S --noconfirm --needed gimp tldr go fzf btop stylua node npm fastfetch
+go install github.com/air-verse/air@latest
+yay -S --noconfirm ttf-font-awesome ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols
+yay -S --noconfirm ghostty
+
+rm -rf $HOME/.oh-my-zsh
+curl -L http://install.ohmyz.sh | sh

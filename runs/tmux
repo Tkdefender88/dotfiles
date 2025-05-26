@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+sudo pacman -S --noconfirm --needed tmux
+
+rm -rf ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

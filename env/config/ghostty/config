@@ -1,8 +1,10 @@
 theme = dark:GruvboxDark,light:GruvboxLight
 
-background = 000000
 background-opacity = 0.85
 background-blur = false
 
 shell-integration-features = no-cursor,no-sudo,no-title
 gtk-titlebar = false
+
+window-padding-y = 4
+window-padding-x = 4

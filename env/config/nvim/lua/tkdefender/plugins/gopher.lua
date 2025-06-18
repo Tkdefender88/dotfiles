@@ -1,11 +1,11 @@
 return {
   "olexsmir/gopher.nvim",
   ft = "go",
-  config = function(_, opts)
-    require("gopher").setup(opts)
-    vim.keymap.set("n", "<leader>ee", function() vim.cmd [[silent! GoIfErr]] end)
+  config = function()
+    vim.keymap.set("n", "<leader>ee", function() vim.cmd.GoIfErr() end)
   end,
+  opts = {},
   build = function()
-    vim.cmd [[silent! GoInstallDeps]]
+    vim.cmd.GoInstallDeps()
   end,
 }

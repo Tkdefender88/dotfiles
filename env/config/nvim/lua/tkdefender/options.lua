@@ -2,9 +2,9 @@ local set = vim.opt
 local autocmd = vim.api.nvim_create_autocmd
 local highlight = vim.api.nvim_set_hl
 
-set.tabstop = 4
-set.softtabstop = 4
-set.shiftwidth = 4
+set.tabstop = 2
+set.softtabstop = 2
+set.shiftwidth = 2
 set.expandtab = true
 
 set.swapfile = false

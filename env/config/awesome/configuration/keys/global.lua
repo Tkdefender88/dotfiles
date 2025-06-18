@@ -159,8 +159,10 @@ local global_keys =
             { description = "restore minimized", group = "client" }),
 
         -- Prompt
-        awful.key({ modkey }, "space", function() awful.util.spawn("rofi -show combi -modes combi -combi-modes \"window,drun\" --show-icons") end,
+        awful.key({ modkey }, "space", function() awful.util.spawn("rofi -show drun") end,
             { description = "run rofi", group = "juicetin" }),
+        awful.key({ "Control" }, "e", function() awful.util.spawn("rofi -show emoji") end,
+            { description = "run rofi emoji picker", group = "juicetin" }),
         awful.key(
             {},
             'XF86AudioRaiseVolume',

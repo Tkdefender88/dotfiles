@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 dry_run="0"
+mac="0"
 
 if [ -z "$XDG_CONFIG_HOME" ]; then
     echo "no xdg config home"
@@ -12,8 +13,12 @@ if [ -z "$DEV_ENV" ]; then
     exit 1
 fi
 
-if [[ $1 == "--dry" ]]; then
+if [[ $1 == "--dry" || $2 == "--dry" ]]; then
     dry_run="1"
+fi
+
+if [[ $1 == "--mac" || $2 == "--mac" ]]; then
+    mac="1"
 fi
 
 log() {
@@ -60,6 +65,8 @@ update_files() {
 
 update_files $DEV_ENV/env/config $XDG_CONFIG_HOME
 
-copy $DEV_ENV/env/.zshrc $HOME/.zshrc
-copy $DEV_ENV/env/.zprofile $HOME/.zprofile
+if [[ $mac == "0" ]]; then
+    copy $DEV_ENV/env/.zshrc $HOME/.zshrc
+    copy $DEV_ENV/env/.zprofile $HOME/.zprofile
+fi
 

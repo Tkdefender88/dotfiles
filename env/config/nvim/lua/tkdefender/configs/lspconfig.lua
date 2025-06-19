@@ -15,7 +15,7 @@ local cmp_select = { behavior = cmp.SelectBehavior.Select }
 cmp.setup({
   snippet = {
     expand = function(args)
-      require('luasnip').lsp_expand(args.body) -- For `luasnip` users. 
+      require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
     end,
   },
   mapping = cmp.mapping.preset.insert({
@@ -27,6 +27,7 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'luasnip' }, -- For luasnip users.
+    { name = 'supermaven' },
   }, {
     { name = 'buffer' },
   })

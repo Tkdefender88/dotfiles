@@ -27,4 +27,9 @@ alias vim="nvim"
 alias nowutc="date -u +'%Y-%m-%dT%H:%M:%S.000000Z'"
 alias uuid="uuidgen | tr '[:upper:]' '[:lower:]'"
 
+# Load API keys from Skate
+if command -v skate &> /dev/null; then
+    export OPENAI_API_KEY=$(skate get open_ai_api_key 2>/dev/null)
+fi
+
 fastfetch

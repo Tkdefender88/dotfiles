@@ -1,0 +1,17 @@
+[user]
+  email = me@justinbak.com
+  name = TKDefender88
+[init]
+  defaultBranch = master
+[gitbutler]
+  aiOpenAIKeyOption = butlerAPI
+[alias]
+  co = checkout
+  st = status
+  sup = status
+  ci = commit
+  br = branch
+  yoink = pull
+  yeet = push
+  ls = ls-files
+  unstage = reset HEAD

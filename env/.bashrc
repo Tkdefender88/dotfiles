@@ -1,0 +1,31 @@
+# All the default Omarchy aliases and functions
+# (don't mess with these directly, just overwrite them here!)
+source ~/.local/share/omarchy/default/bash/rc
+
+# Add your own exports, aliases, and functions here.
+#
+# Make an alias for invoking commands you use constantly
+# alias p='python'
+#
+export EDITOR="nvim"
+
+eval "$(starship init bash)"
+
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/.cargo/bin
+
+if command -v skate &> /dev/null
+then
+  export OPENAI_API_KEY="$(skate get open_ai_api_key)"
+fi
+
+bind '"\ef": "tmux-sessionizer\n"'
+
+alias lg="lazygit"
+alias edbash="nvim ~/.bashrc"
+alias reload="source ~/.bashrc"
+
+alias dcu="docker compose up"
+alias dcr="docker compose run --rm"
+alias dc="docker compose"

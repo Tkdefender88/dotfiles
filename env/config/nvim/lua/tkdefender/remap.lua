@@ -19,6 +19,8 @@ vim.keymap.set("n", "<leader>y", "\"+y", {desc = "yank to system clipboard"})
 vim.keymap.set("v", "<leader>y", "\"+y", {desc = "yank to system clipboard"})
 vim.keymap.set("n", "<leader>Y", "\"+Y", {desc = "yank to system clipboard"})
 
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
 vim.keymap.set("n", "Q", "<nop>")
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")

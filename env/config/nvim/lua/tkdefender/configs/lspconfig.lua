@@ -61,6 +61,12 @@ lspconfig.gopls.setup {
   },
 }
 
+lspconfig.zls.setup {
+  capabilities = capabilities,
+  cmd = { "zls" },
+  filetypes = { "zig" },
+}
+
 lspconfig.lua_ls.setup {
   capabilities = capabilities,
   settings = {

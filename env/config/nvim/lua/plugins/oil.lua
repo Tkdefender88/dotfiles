@@ -8,6 +8,13 @@ return {
       max_width = 0.75,
       max_height = 0.75,
     },
+    view_options = {
+      show_hidden = true,
+      is_always_hidden = function(name, bufnr)
+        return false
+      end,
+      natural_order = "fast"
+    },
     columns = {
       "icon",
       "permissions"

@@ -1,6 +1,0 @@
-{
-  "shell": {
-    "path": "/bin/zsh",
-    "args": ["-l"]
-  }
-}

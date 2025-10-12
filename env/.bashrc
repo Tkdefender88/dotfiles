@@ -7,6 +7,8 @@ source ~/.local/share/omarchy/default/bash/rc
 # Make an alias for invoking commands you use constantly
 # alias p='python'
 #
+
+export DEV_ENV="$HOME/dotfiles"
 export EDITOR="nvim"
 
 eval "$(starship init bash)"

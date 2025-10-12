@@ -1,10 +1,8 @@
 [user]
-  email = me@justinbak.com
+  email = tkdenfeder@proton.me
   name = TKDefender88
 [init]
   defaultBranch = master
-[gitbutler]
-  aiOpenAIKeyOption = butlerAPI
 [alias]
   co = checkout
   st = status

@@ -68,5 +68,7 @@ update_files $DEV_ENV/env/config $XDG_CONFIG_HOME
 if [[ $mac == "0" ]]; then
     copy $DEV_ENV/env/.zshrc $HOME/.zshrc
     copy $DEV_ENV/env/.zprofile $HOME/.zprofile
+    copy $DEV_ENV/env/.bashrc $HOME/.bashrc
+    copy $DEV_ENV/env/scripts/tmux-sessionizer $HOME/.local/bin/tmux-sessionizer
 fi
 

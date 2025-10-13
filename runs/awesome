@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-yay -S --noconfirm --needed awesome picom i3lock-fancy xclip ttf-roboto \
-    polkit-gnome materia-theme lxappearance flameshot network-manager-applet \
-    xfce4-power-manager qt5-styleplugins papirus-icon-theme feh polybar
-

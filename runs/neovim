@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-sudo pacman -S --noconfirm neovim luarocks ripgrep
-
-sudo luarocks install luacheck

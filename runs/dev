@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-yay -S --noconfirm --needed gimp tldr go fzf btop stylua node npm fastfetch
+yay -S --noconfirm --needed tldr fzf stylua fastfetch
 go install github.com/air-verse/air@latest
+go install github.com/charmbracelet/skate@latest
+go install github.com/orlangure/gocovsh@latest
 yay -S --noconfirm ttf-font-awesome ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols
-yay -S --noconfirm ghostty
+yay -S --noconfirm wishlist-bin
+pacman -S --noconfirm --needed vhs
 
-rm -rf $HOME/.oh-my-zsh
-curl -L http://install.ohmyz.sh | sh

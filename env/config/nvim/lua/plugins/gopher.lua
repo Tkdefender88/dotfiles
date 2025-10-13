@@ -5,7 +5,4 @@ return {
     vim.keymap.set("n", "<leader>ee", function() vim.cmd.GoIfErr() end)
   end,
   opts = {},
-  build = function()
-    vim.cmd.GoInstallDeps()
-  end,
 }

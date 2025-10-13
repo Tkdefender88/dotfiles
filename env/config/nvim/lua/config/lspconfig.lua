@@ -1,4 +1,4 @@
-local lspconfig = require("lspconfig")
+local lspconfig = vim.lsp.config
 local util = require("lspconfig/util")
 
 local cmp = require('cmp')
@@ -45,7 +45,8 @@ vim.diagnostic.config({
   },
 })
 
-lspconfig.gopls.setup {
+vim.lsp.enable("gopls")
+vim.lsp.config("gopls", {
   capabilities = capabilities,
   cmd = { "gopls" },
   filetypes = { "go", "gomod", "gowork", "gotmpl" },
@@ -59,27 +60,9 @@ lspconfig.gopls.setup {
       },
     },
   },
-}
+})
 
-lspconfig.zls.setup {
-  capabilities = capabilities,
-  cmd = { "zls" },
-  filetypes = { "zig" },
-}
-
-lspconfig.lua_ls.setup {
-  capabilities = capabilities,
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { "vim", "it", "describe", "before_each", "after_each" },
-      }
-    }
-  }
-}
-
-lspconfig.gleam.setup({})
-
-lspconfig.emmet_ls.setup {
-  filetypes = { "css", "eruby", "html", "htmldjango", "javascriptreact", "less", "pug", "sass", "scss", "typescriptreact", "htmlangular", "gotmpl" }
-}
+vim.lsp.enable("zls")
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("gleam")
+vim.lsp.enable("emmet_ls")

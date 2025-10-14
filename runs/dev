@@ -7,6 +7,8 @@ go install github.com/orlangure/gocovsh@latest
 go install golang.org/x/tools/cmd/goimports@latest
 go install github.com/segmentio/golines@latest
 go install mvdan.cc/gofumpt@latest
+go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
+go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest
 yay -S --noconfirm ttf-font-awesome ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols
 yay -S --noconfirm wishlist-bin
 sudo pacman -S --noconfirm --needed vhs

@@ -1,4 +1,3 @@
-local lspconfig = vim.lsp.config
 local util = require("lspconfig/util")
 
 local cmp = require('cmp')
@@ -45,14 +44,13 @@ vim.diagnostic.config({
   },
 })
 
-vim.lsp.enable("gopls")
 vim.lsp.config("gopls", {
   capabilities = capabilities,
-  cmd = { "gopls" },
+  cmd = { "/home/juicetin/go/bin/gopls" },
   filetypes = { "go", "gomod", "gowork", "gotmpl" },
-  root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+  root_markers = util.root_pattern("go.work", "go.mod", ".git"),
   settings = {
-    gopls = {
+    ['gopls'] = {
       completeUnimported = true,
       usePlaceholders = true,
       analyses = {
@@ -61,6 +59,7 @@ vim.lsp.config("gopls", {
     },
   },
 })
+vim.lsp.enable("gopls")
 
 vim.lsp.enable("zls")
 vim.lsp.enable("lua_ls")

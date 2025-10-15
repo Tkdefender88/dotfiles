@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 yay -S --noconfirm --needed tldr fzf stylua fastfetch
+go install golang.org/x/tools/gopls@latest
 go install github.com/air-verse/air@latest
 go install github.com/charmbracelet/skate@latest
 go install github.com/orlangure/gocovsh@latest

@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
+# dev tools and fonts
+sudo pacman -S --noconfirm --needed vhs
+
 yay -S --noconfirm --needed tldr fzf stylua fastfetch
+yay -S --noconfirm ttf-font-awesome ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols
+yay -S --noconfirm wishlist-bin
+yay -S --noconfirm --needed crush-bin
+
+# go dev tools
 go install golang.org/x/tools/gopls@latest
 go install github.com/air-verse/air@latest
 go install github.com/charmbracelet/skate@latest
@@ -10,8 +18,3 @@ go install github.com/segmentio/golines@latest
 go install mvdan.cc/gofumpt@latest
 go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
 go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest
-yay -S --noconfirm ttf-font-awesome ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols
-yay -S --noconfirm wishlist-bin
-yay -S --noconfirm --needed crush-bin
-sudo pacman -S --noconfirm --needed vhs
-

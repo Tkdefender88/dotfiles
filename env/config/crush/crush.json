@@ -1,0 +1,10 @@
+{
+  "lsp": {
+    "go": {
+      "command": "gopls",
+      "env": {
+        "GOTOOLCHAIN": "go1.25.1"
+      }
+    }
+  }
+}

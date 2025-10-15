@@ -60,6 +60,7 @@ update_files() {
 
 update_files $DEV_ENV/env/config $XDG_CONFIG_HOME
 
+copy $DEV_ENV/env/config/starship.toml $XDG_CONFIG_HOME/starship.toml
 copy $DEV_ENV/env/.bashrc $HOME/.bashrc
 copy $DEV_ENV/env/scripts/tmux-sessionizer $HOME/.local/bin/tmux-sessionizer
 

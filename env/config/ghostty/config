@@ -1,4 +1,4 @@
-theme = dark:GruvboxDark,light:GruvboxLight
+theme = dark:Gruvbox Dark,light:Gruvbox Light
 
 background-opacity = 0.85
 background-blur = false
@@ -8,3 +8,5 @@ gtk-titlebar = false
 
 window-padding-y = 4
 window-padding-x = 4
+
+copy-on-select = clipboard

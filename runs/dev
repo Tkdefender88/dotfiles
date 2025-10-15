@@ -11,5 +11,6 @@ go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@lat
 go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest
 yay -S --noconfirm ttf-font-awesome ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols
 yay -S --noconfirm wishlist-bin
+yay -S --noconfirm --needed crush-bin
 sudo pacman -S --noconfirm --needed vhs
 

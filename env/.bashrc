@@ -28,6 +28,10 @@ alias lg="lazygit"
 alias edbash="nvim ~/.bashrc"
 alias reload="source ~/.bashrc"
 
+alias uuid="uuidgen | tr '[:upper:]' '[:lower:]'"
+alias uuidshort="uuidgen | tr -d '-' | tr '[:upper:]' '[:lower:]'"
+alias nowutc="date -u +'%Y-%m-%dT%H:%M:%S.000000Z'"
+
 alias dcu="docker compose up"
 alias dcr="docker compose run --rm"
 alias dc="docker compose"

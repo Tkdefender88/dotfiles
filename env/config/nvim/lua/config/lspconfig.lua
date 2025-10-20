@@ -46,7 +46,7 @@ vim.diagnostic.config({
 
 vim.lsp.config("gopls", {
   capabilities = capabilities,
-  cmd = { "/home/juicetin/go/bin/gopls" },
+  cmd = { "gopls" },
   filetypes = { "go", "gomod", "gowork", "gotmpl" },
   root_markers = util.root_pattern("go.work", "go.mod", ".git"),
   settings = {

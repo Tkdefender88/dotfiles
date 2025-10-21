@@ -20,6 +20,7 @@ export PATH=$PATH:$HOME/.cargo/bin
 if command -v skate &> /dev/null
 then
   export OPENAI_API_KEY="$(skate get open_ai_api_key 2> /dev/null)"
+  export ANTHROPIC_API_KEY="$(skate get anthropic_api_key 2> /dev/null)"
 fi
 
 bind '"\ef": "tmux-sessionizer\n"'

@@ -3,7 +3,7 @@ return {
     "folke/zen-mode.nvim",
     opts = {
       window = {
-        width = .85
+        width = .5
       }
     }
   }

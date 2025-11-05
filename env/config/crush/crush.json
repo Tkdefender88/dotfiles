@@ -19,6 +19,15 @@
         "/home/juicetin/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/plugins/mcpserver/lib/mcpserver-frontend.jar:/home/juicetin/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/lib/util-8.jar:/home/juicetin/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/lib/modules/intellij.libraries.ktor.client.cio.jar:/home/juicetin/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/lib/lib-client.jar:/home/juicetin/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/lib/modules/intellij.libraries.ktor.client.jar",
         "com.intellij.mcpserver.stdio.McpStdioRunnerKt"
       ]
+    },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "timeout": 120,
+      "disabled": false,
+      "headers": {
+        "Authorization": "Bearer $(skate get github_pat)"
+      }
     }
   }
 }

@@ -37,3 +37,6 @@ alias nowutc="date -u +'%Y-%m-%dT%H:%M:%S.000000Z'"
 alias dcu="docker compose up"
 alias dcr="docker compose run --rm"
 alias dc="docker compose"
+
+alias freyr='docker run -it --rm -v $PWD:/data freyrcli/freyrjs'
+alias eidf='. $HOME/esp/esp-idf/export.sh'

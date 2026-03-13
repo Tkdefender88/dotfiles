@@ -1,0 +1,6 @@
+debug: false
+ts_extra_search_paths:
+    - ~/dotfiles
+ts_max_search_depth: 2
+ts_search_paths:
+    - ~/workspace

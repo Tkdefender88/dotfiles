@@ -1,0 +1,4 @@
+# Default directory where worktrees are created
+worktree_path: ~/workspace/worktrees
+
+# Git repositories to manage

@@ -7,27 +7,31 @@
       }
     }
   },
-  "mcp": {
-    "intellij": {
-      "type": "stdio",
-      "env": {
-        "IJ_MCP_SERVER_PORT": "64342"
-      },
-      "command": "/home/juicetin/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/jbr/bin/java",
-      "args": [
-        "-classpath",
-        "/home/juicetin/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/plugins/mcpserver/lib/mcpserver-frontend.jar:/home/juicetin/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/lib/util-8.jar:/home/juicetin/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/lib/modules/intellij.libraries.ktor.client.cio.jar:/home/juicetin/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/lib/lib-client.jar:/home/juicetin/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/lib/modules/intellij.libraries.ktor.client.jar",
-        "com.intellij.mcpserver.stdio.McpStdioRunnerKt"
+  "providers": {
+    "ollama": {
+      "name": "ollama",
+      "base_url": "http://localhost:11434/v1",
+      "type": "openai-compat",
+      "models": [
+        {
+          "name": "Qwen 3 8b",
+          "id": "qwen3:8b",
+          "context_window": 32768,
+          "default_max_tokens": 8192
+        },
+        {
+          "name": "Qwen 2.5 14b",
+          "id": "qwen2.5-coder:14b",
+          "context_window": 32768,
+          "default_max_tokens": 8192
+        },
+        {
+          "name": "Qwen 2.5 coder 7b",
+          "id": "qwen2.5-coder:7b",
+          "context_window": 65536,
+          "default_max_tokens": 8192
+        }
       ]
-    },
-    "github": {
-      "type": "http",
-      "url": "https://api.githubcopilot.com/mcp/",
-      "timeout": 120,
-      "disabled": false,
-      "headers": {
-        "Authorization": "Bearer $(skate get github_pat)"
-      }
     }
   }
 }

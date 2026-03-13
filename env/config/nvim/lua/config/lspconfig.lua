@@ -44,6 +44,15 @@ vim.diagnostic.config({
   },
 })
 
+vim.lsp.enable("tsserver")
+vim.lsp.config("tsserver", {
+  capabilities = capabilities,
+  filetypes = { "typescript", "javascript" },
+  cmd = { "typescript-language-server", "--stdio" },
+  root_markers = util.root_pattern("package.json", "tsconfig.json", ".git"),
+  root_dir = vim.fs.root(0, {'package.json', '.git'}),
+})
+
 vim.lsp.config("gopls", {
   capabilities = capabilities,
   cmd = { "gopls" },
@@ -61,7 +70,20 @@ vim.lsp.config("gopls", {
 })
 vim.lsp.enable("gopls")
 
-vim.lsp.enable("zls")
-vim.lsp.enable("lua_ls")
+vim.lsp.config("gleam", {
+  capabilities = capabilities,
+  cmd = { "gleam", "lsp" },
+})
 vim.lsp.enable("gleam")
+
+vim.lsp.config("zls", {
+  capabilities = capabilities,
+  cmd = { "zls" },
+  filetypes = { "zig" },
+  root_dir = util.root_pattern("build.zig", "build.zig.zon") or vim.loop.cwd(),
+  single_file_support = true,
+});
+vim.lsp.enable("zls")
+
+vim.lsp.enable("lua_ls")
 vim.lsp.enable("emmet_ls")

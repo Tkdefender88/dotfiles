@@ -26,7 +26,6 @@ fi
 
 bind '"\ef": "tmux-sessionizer\n"'
 
-alias wtt="tmux-sessionizer $(worktree-manager)"
 alias lg="lazygit"
 alias edbash="nvim ~/.bashrc"
 alias reload="source ~/.bashrc"

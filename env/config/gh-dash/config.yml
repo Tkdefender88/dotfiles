@@ -1,0 +1,29 @@
+defaults:
+  issuesLimit: 20
+  notificationsLimit: 20
+  prApproveComment: LGTM
+  preview:
+    open: true
+    width: 0.45
+    height: 0.60
+    position: auto
+  prsLimit: 20
+  refetchIntervalMinutes: 30
+  view: prs
+keybindings:
+  universal:
+    - key: g
+      command: lazygit
+  prs:
+    - key: C
+      name: code review
+      command: >
+        tmux new-window -c {{.RepoPath}} '
+        nvim -c ":silent Octo pr edit {{.PRNumber}}"
+        '
+    - key: v
+      name: approve
+      command: >
+        gh pr review --repo {{.RepoName}} --approve --body "$(gum input --prompt='Approval Comment: ')" {{.PrNumber}}
+pager:
+  diff: "hunk diff main"

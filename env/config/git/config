@@ -13,3 +13,5 @@
   yeet = push
   ls = ls-files
   unstage = reset HEAD
+[core]
+  pager = hunk pager

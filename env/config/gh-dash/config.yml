@@ -27,3 +27,16 @@ keybindings:
         gh pr review --repo {{.RepoName}} --approve --body "$(gum input --prompt='Approval Comment: ')" {{.PrNumber}}
 pager:
   diff: "hunk diff main"
+repoPaths:
+  onXmaps/analytics-router: ~/workspace/work/analytics-router/analytics-router
+  onXmaps/atlantis-analytics: ~/workspace/work/analytics-router/atlantis-analytics
+  onXmaps/onboarding: ~/workspace/work/onboarding/onboarding
+  onXmaps/atlantis-onboarding: ~/workspace/work/onboarding/atlantis-onboarding
+  onXmaps/user-traits: ~/workspace/work/user-traits/user-traits
+  onXmaps/atlantis-user-traits: ~/workspace/work/user-traits/atlantis-user-traits
+  onXmaps/user-bucketing: ~/workspace/work/user-bucketing/user-bucketing
+  onXmaps/atlantis-user-bucketing: ~/workspace/work/user-bucketing/atlantis-user-bucketing
+  onXmaps/growth-content: ~/workspace/work/growth-content/growth-content
+  onXmaps/atlantis-growth-content: ~/workspace/work/growth-content/atlantis-growth-content
+  onXmaps/app-start-tracker: ~/workspace/work/app-start-tracker/app-start-tracker
+  onXmaps/atlantis-app-start-tracker: ~/workspace/work/app-start-tracker/atlantis-app-start-tracker

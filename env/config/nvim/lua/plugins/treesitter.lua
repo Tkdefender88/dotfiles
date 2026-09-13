@@ -19,7 +19,14 @@ return {
         "zig",
         "rust",
         "python",
+        "json",
+        "make",
+        "dockerfile",
+        "html",
+        "templ",
       }
+
+      vim.filetype.add({ extension = { templ = 'templ' } })
 
       require('nvim-treesitter').setup({
         prefer_git = true,

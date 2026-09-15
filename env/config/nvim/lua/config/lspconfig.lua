@@ -49,7 +49,7 @@ vim.lsp.config("tsserver", {
   capabilities = capabilities,
   filetypes = { "typescript", "javascript" },
   cmd = { "typescript-language-server", "--stdio" },
-  root_markers = util.root_pattern("package.json", "tsconfig.json", ".git"),
+  root_markers = { "package.json", "tsconfig.json", ".git" },
   root_dir = vim.fs.root(0, {'package.json', '.git'}),
 })
 
@@ -57,7 +57,7 @@ vim.lsp.config("gopls", {
   capabilities = capabilities,
   cmd = { "gopls" },
   filetypes = { "go", "gomod", "gowork", "gotmpl" },
-  root_markers = util.root_pattern("go.work", "go.mod", ".git"),
+  root_markers = { "go.work", "go.mod", ".git" },
   settings = {
     ['gopls'] = {
       completeUnimported = true,
@@ -87,3 +87,18 @@ vim.lsp.enable("zls")
 
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("emmet_ls")
+
+vim.lsp.config("templ", {
+  capabilities = capabilities,
+  cmd = { "templ", "lsp" },
+  filetypes = { "templ" },
+  root_markers = { "go.mod", ".git" },
+})
+vim.lsp.enable("templ")
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.templ",
+  callback = function(args)
+    vim.lsp.buf.format({ bufnr = args.buf, timeout_ms = 2000 })
+  end,
+})

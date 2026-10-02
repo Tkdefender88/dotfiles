@@ -18,6 +18,7 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/develop/flutter/bin
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 if command -v skate &> /dev/null
 then

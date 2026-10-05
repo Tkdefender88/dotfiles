@@ -24,6 +24,8 @@ return {
         "dockerfile",
         "html",
         "templ",
+        "terraform",
+        "hcl",
       }
 
       vim.filetype.add({ extension = { templ = 'templ' } })

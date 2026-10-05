@@ -96,6 +96,17 @@ vim.lsp.config("templ", {
 })
 vim.lsp.enable("templ")
 
+-- filetypes (terraform, terraform-vars for .tf/.tfvars) come from nvim-lspconfig's terraformls
+vim.lsp.config("terraformls", { capabilities = capabilities })
+vim.lsp.enable("terraformls")
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "*.tf", "*.tfvars" },
+  callback = function(args)
+    vim.lsp.buf.format({ bufnr = args.buf, timeout_ms = 2000 })
+  end,
+})
+
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*.templ",
   callback = function(args)

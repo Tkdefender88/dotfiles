@@ -1,3 +1,12 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[pull]
+	rebase = true
+[init]
+	defaultBranch = master
 [user]
 	name = Justin Bak (╯°□°)╯︵ ┻━┻
 	email = me@justinbak.com
@@ -6,26 +15,7 @@
 	format = ssh
 [commit]
 	gpgsign = true
-[pull]
-	rebase = true
-[init]
-  defaultBranch = master
-[alias]
-  co = checkout
-  st = status
-  sup = status
-  ci = commit
-  br = branch
-  yoink = pull
-  yeet = push
-  ls = ls-files
-  unstage = reset HEAD
-[core]
-  pager = "hunk pager"
-[diff]
-  tool = hunk
 [difftool "hunk"]
 	cmd = hunk difftool \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 [difftool]
 	prompt = false
-

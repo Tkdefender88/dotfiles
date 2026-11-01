@@ -1,6 +1,5 @@
-env/
-.git/
+.git
 .gitignore
-scripts/
+scripts
 run
 README.md

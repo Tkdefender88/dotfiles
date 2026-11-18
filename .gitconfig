@@ -10,7 +10,7 @@
 [user]
 	name = Justin Bak (╯°□°)╯︵ ┻━┻
 	email = me@justinbak.com
-	signingkey = /home/juicetin/.ssh/id_ed25519_sk_rk.pub
+	signingkey = key::sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAILBcrdBAJYMEc8Jmu6Snlv0iPE0WfvWdpr7QTH+EcZkzAAAAFHNzaDppZF9lZDI1NTE5X3NrX3Jr
 [gpg]
 	format = ssh
 [commit]

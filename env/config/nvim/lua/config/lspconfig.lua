@@ -80,10 +80,19 @@ vim.lsp.config("zls", {
   capabilities = capabilities,
   cmd = { "zls" },
   filetypes = { "zig" },
-  root_dir = util.root_pattern("build.zig", "build.zig.zon") or vim.loop.cwd(),
+  root_dir = util.root_pattern("build.zig", "build.zig.zon")(vim.fn.getcwd()) or vim.loop.cwd(),
   single_file_support = true,
 });
 vim.lsp.enable("zls")
+
+vim.lsp.config("tinymist", {
+  capabilities = capabilities,
+  cmd = { "tinymist" },
+  filetypes = { "typst" },
+  root_markers = { ".git" },
+  single_file_support = true,
+})
+vim.lsp.enable("tinymist")
 
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("emmet_ls")
@@ -109,6 +118,20 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*.templ",
+  callback = function(args)
+    vim.lsp.buf.format({ bufnr = args.buf, timeout_ms = 2000 })
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.zig",
+  callback = function(args)
+    vim.lsp.buf.format({ bufnr = args.buf, timeout_ms = 2000 })
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.typ",
   callback = function(args)
     vim.lsp.buf.format({ bufnr = args.buf, timeout_ms = 2000 })
   end,

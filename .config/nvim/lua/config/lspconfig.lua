@@ -105,6 +105,14 @@ vim.lsp.config("ruff", {
 })
 vim.lsp.enable("ruff")
 
+vim.lsp.config("basedpyright", {
+  capabilities = capabilities,
+  cmd = { "basedpyright-langserver", "--stdio" },
+  filetypes = { "python" },
+  root_markers = { "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", ".git" },
+})
+vim.lsp.enable("basedpyright")
+
 vim.lsp.config("templ", {
   capabilities = capabilities,
   cmd = { "templ", "lsp" },

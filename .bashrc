@@ -25,6 +25,10 @@ then
   export SIGNOZ_API_KEY="$(skate get gitlab_signoz_mcp_api_key 2> /dev/null)"
 fi
 
+if [[ -z "$SSH_AUTH_SOCK" && -S "$XDG_RUNTIME_DIR/ssh-agent.socket" ]]; then
+  export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+fi
+
 bind '"\ef": "tmux-sessionizer\n"'
 
 alias lg="lazygit"

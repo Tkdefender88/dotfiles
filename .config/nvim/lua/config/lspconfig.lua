@@ -97,6 +97,22 @@ vim.lsp.enable("tinymist")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("emmet_ls")
 
+vim.lsp.config("ruff", {
+  capabilities = capabilities,
+  cmd = { "ruff", "server" },
+  filetypes = { "python" },
+  root_markers = { "pyproject.toml", "ruff.toml", ".git" },
+})
+vim.lsp.enable("ruff")
+
+vim.lsp.config("basedpyright", {
+  capabilities = capabilities,
+  cmd = { "basedpyright-langserver", "--stdio" },
+  filetypes = { "python" },
+  root_markers = { "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", ".git" },
+})
+vim.lsp.enable("basedpyright")
+
 vim.lsp.config("templ", {
   capabilities = capabilities,
   cmd = { "templ", "lsp" },
@@ -139,6 +155,13 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*.dart",
+  callback = function(args)
+    vim.lsp.buf.format({ bufnr = args.buf, timeout_ms = 2000 })
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.py",
   callback = function(args)
     vim.lsp.buf.format({ bufnr = args.buf, timeout_ms = 2000 })
   end,

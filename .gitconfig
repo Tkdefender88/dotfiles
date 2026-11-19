@@ -1,0 +1,21 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[pull]
+	rebase = true
+[init]
+	defaultBranch = master
+[user]
+	name = Justin Bak (╯°□°)╯︵ ┻━┻
+	email = me@justinbak.com
+	signingkey = key::sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAILBcrdBAJYMEc8Jmu6Snlv0iPE0WfvWdpr7QTH+EcZkzAAAAFHNzaDppZF9lZDI1NTE5X3NrX3Jr
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[difftool "hunk"]
+	cmd = hunk difftool \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[difftool]
+	prompt = false

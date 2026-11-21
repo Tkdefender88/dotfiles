@@ -45,3 +45,5 @@ alias dc="docker compose"
 
 alias freyr='docker run -it --rm -v $PWD:/data freyrcli/freyrjs'
 alias eidf='. $HOME/esp/esp-idf/export.sh'
+
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init bash)"; fi

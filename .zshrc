@@ -91,9 +91,9 @@ function () {
   if command -v skate &> /dev/null
   then
     local cloudsmith_key="$(skate get cloudsmith_api_key 2> /dev/null)"
-    local cloudsmith_user="$(skate get cloudmith_user 2> /dev/null)"
+    local cloudsmith_user="$(skate get cloudsmith_user 2> /dev/null)"
     export CLOUDSMITH_API_KEY=$cloudsmith_key
-    export CLOUDSMITH_USER=$cloudmith_user
+    export CLOUDSMITH_USER=$cloudsmith_user
   fi
 }
 
